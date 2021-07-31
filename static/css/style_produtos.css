@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,500&display=swap');
+
+*{margin: 0; padding:0; box-sizing:border-box;}
+
+body {
+    display: grid;
+    place-items: center;  /*centraliza a imagem*/
+}
+section div#item-wrapper {
+    width: 100%; /*ocupação total da pag*/
+}
+section div#item-wrapper div#item{
+    display: flex; /*mantem uma imagem ao lado da outra*/
+    /*habilita um scroll somente nas imagens*/
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; 
+    -webkit-overflow-scrolling: touch; /*habilita a função em outros dispositivos*/
+    scroll-behavior: smooth; /*passa a imagem de forma suave*/
+}
+.item{
+    flex: none; /*uma imagem ao lado da outra*/
+    width: 100%;
+    height: 700px;
+    scroll-snap-align: start; /*alinha o inicio da imagem*/
+    pointer-events: none;
+}
+section div#item-wrapper div#item img{
+    /*ocupação total da div*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*não permite que a imagem fique distorcida*/
+}
+/*html*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav{
+    padding: .8vw;
+    position: relative;
+    width: 100%;
+}
+nav ul{
+    background-color: #023047;
+    list-style: none;
+    display: flex; 
+    justify-content: center;
+    
+}
+nav ul h2{
+    color: #8ecae6;
+    font-size: 2vw;
+}
+nav ul li{
+    padding: .8vw; 
+    margin-left: 5vw;
+    justify-content: center;
+    color: #fff;
+    font-size: 1vw;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+} 
+nav div{
+    background-color: #219dbcaf;
+    width: 100%;
+    list-style: none;
+}
+nav div li{
+    justify-content: center;
+    display: flex;
+    margin-left: 3vw;
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+nav div li a{
+    text-decoration: none;
+    color: #023047;
+}
+
+/* SECTION VIAGENS NACIONAIS */
+
+body section#viagens section#viagens-nacionais{
+    display: flex;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+body section#viagens section#viagens-nacionais div{
+    justify-content: center;
+    text-align: center;
+}
+
+body section#viagens section#viagens-nacionais h2{
+    padding-top: 1rem;
+    padding-left: 3rem;
+    padding-right: 4rem;
+}
+
+body section#viagens section#viagens-nacionais div img{
+    width: 20vw;
+    border-radius: 4%;
+}
+
+/* SECTION VIAGENS INTERNACIONAIS */
+
+/* Tamanho da suiça alterado separadamente por conta da imagem ser muito grande */
+body section#viagens section#viagens-internacionais section#tamanho-suica img{
+    width: 22vw;
+    height: 14.6vw;
+    border-radius: 4%;
+}
+
+body section#viagens section#viagens-internacionais div img{
+    width: 20vw;
+    border-radius: 4%;
+}
+
+body section#viagens section#viagens-internacionais{
+    display: flex;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+body section#viagens section#viagens-internacionais div{
+    justify-content: center;
+    text-align: center;
+}
+
+body section#viagens section#viagens-internacionais h2{
+    padding-top: 1rem;
+    padding-left: 3rem;
+    padding-right: 4rem;
+}
+
+body section#viagens section#viagens-internacionais div img{
+    width: 22vw;
+    border-radius: 4%;
+}
