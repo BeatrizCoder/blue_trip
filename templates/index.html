@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,65 +8,143 @@
     <title>Blue Trip</title>
     <link rel="stylesheet" href="../static/css/style_index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- BOOSTRAP -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
     <nav>
         <ul>
             <h2>Blue Trip</h2>
-            <li><a href="./index.html">Início</a></li>
-            <li><a href="./pacotes.html">Pacotes de Viagem</a></li>
             <li><a href="./missao.html">Nossa missão</a></li>
-            <li><a href="./perfil.html">Quem somos</a></li>
+            <li><a href="./pacotes.html">Produtos</a></li>
+            <li><a href="">Fale conosco</a></li>
         </ul>
         <div>
             <li> <a href="">Monte sua viagem </a></li>
         </div>
     </nav>
-<!-- Teste -->
-    <section>
-        <div id="item-wrapper">
-            <div id="item">
-                <div class="item"> <img src="../static/img/Fernando_de_Noronha_-_PE-_Cacimba_do_Padre.jpg" alt=""></div>
-                <div class="item"> <img src="../static/img/jericoacoara.jpg" alt=""></div>
-                <div class="item"> <img src="../static/img/Machu_Picchu,_Peru.jpg" alt=""></div>
+
+
+
+    <!------- carousel --------->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Slides -->
+        <div class="carousel-inner" id="carousel-inner">
+            <div class="item active">
+                <img src="../static/img/photo01.jpg" alt="Chania">
+                <div class="carousel-caption">
+                    <h3>Los Angeles</h3>
+                    <p>LA is always so much fun!</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="../static/img/frutigen2.jpg" alt="Chicago">
+                <div class="carousel-caption">
+                    <h3>Chicago</h3>
+                    <p>Thank you, Chicago!</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="../static/img/jericoacoara.jpg" alt="New York">
+                <div class="carousel-caption">
+                    <h3>New York</h3>
+                    <p>We love the Big Apple!</p>
+                </div>
             </div>
         </div>
 
-    </section>        
+        <!-- Controles da direita e esquerda -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
 
-    
+
+
+
+
+
+
+    <section id="covid">
+        <div id="alerta">
+            <div id="protocolo">
+                <h3>Viaje com segurança</h3>
+                <p>Protocolos de saúde COVID-19</p>
+            </div>
+            <div id="covidimg">
+                <img src="../static/img/covid.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section id="cards">
+        <div id="destinos1">
+            <div id="destino-card1">
+                <h2>Destino1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque porro quidem assumenda, quasi facilis
+                    illum maiores architecto fugit ea eaque reiciendis perspiciatis possimus accusamus unde id deleniti
+                    expedita obcaecati dolorum.</p>
+            </div>
+            <div id="destino-card2">
+                <h2>Destino2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque porro quidem assumenda, quasi facilis
+                    illum maiores architecto fugit ea eaque reiciendis perspiciatis possimus accusamus unde id deleniti
+                    expedita obcaecati dolorum.</p>
+            </div>
+        </div>
+        <div id="destinos2">
+            <div id="destino-card3">
+                <h2>Destino3</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque porro quidem assumenda, quasi facilis
+                    illum maiores architecto fugit ea eaque reiciendis perspiciatis possimus accusamus unde id deleniti
+                    expedita obcaecati dolorum.</p>
+            </div>
+            <div id="destino-card4">
+                <h2>Destino4</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque porro quidem assumenda, quasi facilis
+                    illum maiores architecto fugit ea eaque reiciendis perspiciatis possimus accusamus unde id deleniti
+                    expedita obcaecati dolorum.</p>
+            </div>
+        </div>
+
+    </section>
+
+
 
     <script src="../static/js/script.js"></script>
 </body>
+<footer>
+    <ul>
+        <li>
+            <a href="perfil.html">
+                <h2></h2>Quem somos</h2>
+            </a>
+
+        </li>
+    </ul>
+</footer>
+
 </html>
-
-
-<!-- Morro de SP
-https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F7%2F73%2FSunset_at_Morro_de_S%25C3%25A3o_Paulo_.jpg&imgrefurl=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ASunset_at_Morro_de_S%25C3%25A3o_Paulo_.jpg&tbnid=2yyPagUUgszSnM&vet=12ahUKEwiFpcOfvonyAhU1M7kGHf2BAdIQMygRegUIARCpAQ..i&docid=2lT3QOH3cqa_RM&w=4567&h=2644&q=morro%20de%20sao%20paulo&hl=pt-BR&ved=2ahUKEwiFpcOfvonyAhU1M7kGHf2BAdIQMygRegUIARCpAQ
-
-
-ssa
-https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2019%2F04%2F17%2F05%2F41%2Fsalvador-4133397_1280.jpg&imgrefurl=https%3A%2F%2Fpixabay.com%2Fpt%2Fphotos%2Fsalvador-bahia-brasil-turismo-4133397%2F&tbnid=e1IiUA6qCmZczM&vet=12ahUKEwjj5NvdwInyAhWVuJUCHXrfAl0QMygAegUIARD8AQ..i&docid=9PGb1O8WaV7obM&w=1280&h=720&q=salvador&hl=pt-BR&ved=2ahUKEwjj5NvdwInyAhWVuJUCHXrfAl0QMygAegUIARD8AQ
-
-nepal 
-https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2018%2F08%2F23%2F23%2F49%2Fannapurna-3627041_1280.jpg&imgrefurl=https%3A%2F%2Fpixabay.com%2Fpt%2Fphotos%2Fannapurna-himalaia-montanha-nepal-3627041%2F&tbnid=0yLZa_yfTLK7ZM&vet=12ahUKEwibkLjMv4nyAhWyjZUCHX8DCFoQMygVegQIARB2..i&docid=hrFx0hvVtRZYoM&w=1280&h=720&itg=1&q=nepal%20turismo&hl=pt-BR&ved=2ahUKEwibkLjMv4nyAhWyjZUCHX8DCFoQMygVegQIARB2
-
-egito
-https://www.google.com/imgres?imgurl=https%3A%2F%2Fstatic.im-a-puzzle.com%2Fgallery%2FPlaces%2FEgypt%2FAll_Gizah_Pyramids.jpg&imgrefurl=https%3A%2F%2Fim-a-puzzle.com%2Fgallery%2Fgallery.php%3Fgallery%3DEgypt%26ln%3Dpt&tbnid=uWtW52w_9hN0oM&vet=12ahUKEwj86bCbwInyAhXeppUCHeV5CKoQMygWegQIARB6..i&docid=UWk58TWlYLc8iM&w=1350&h=900&q=egito%20turismo&hl=pt-BR&ved=2ahUKEwj86bCbwInyAhXeppUCHeV5CKoQMygWegQIARB6
-
-italia
-https://www.google.com/imgres?imgurl=https%3A%2F%2Fget.pxhere.com%2Fphoto%2Farchitecture-structure-sky-building-palace-old-city-summer-vacation-travel-europe-holiday-landmark-italy-historic-tourism-colosseum-theatre-clouds-rome-history-renaissance-european-famous-italian-italic-722184.jpg&imgrefurl=https%3A%2F%2Fpxhere.com%2Fpt%2Fphoto%2F722184&tbnid=-xquTy2ZNLJNfM&vet=12ahUKEwiIusvXwYnyAhVDrZUCHZcTAskQMygFegQIARBI..i&docid=dfDVvbGOyQHZwM&w=9976&h=5004&itg=1&q=italia%20turismo%20coliseo&hl=pt-BR&ved=2ahUKEwiIusvXwYnyAhVDrZUCHZcTAskQMygFegQIARBI
-
-frança 
-https://www.google.com/imgres?imgurl=https%3A%2F%2Fbelocalexchange.com%2Fblog%2Fwp-content%2Fuploads%2F2017%2F11%2FParis-Guillaume-Speurt.jpg&imgrefurl=https%3A%2F%2Fbelocalexchange.com%2Fblog%2Fen%2Fbelocal-exchange-troca-casa-franca%2F&tbnid=Rbn1HVWXrSpJGM&vet=12ahUKEwjHgtf_wYnyAhUmpJUCHR9XASQQMygYegUIARDXAQ..i&docid=MennM8Y8erlrXM&w=1200&h=731&q=fran%C3%A7a%20turismo&hl=pt-BR&ved=2ahUKEwjHgtf_wYnyAhUmpJUCHR9XASQQMygYegUIARDXAQ
-
-Aspen
-https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fa%2Fa7%2FLift_1A_on_Aspen_Mountain.jpg&imgrefurl=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ALift_1A_on_Aspen_Mountain.jpg&tbnid=ZaqlxBP7YCOytM&vet=12ahUKEwiQnOaFw4nyAhXSILkGHZgYDbIQMygOegUIARD4AQ..i&docid=z-oHyivYowlB8M&w=3672&h=2448&q=Aspen&hl=pt-BR&ved=2ahUKEwiQnOaFw4nyAhXSILkGHZgYDbIQMygOegUIARD4AQ
-
-Machu picchu peru
-https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fc%2Fca%2FMachu_Picchu%252C_Peru_%25282018%2529.jpg&imgrefurl=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AMachu_Picchu%2C_Peru_(2018).jpg&tbnid=2P3THcKc7xQnaM&vet=12ahUKEwj9wPWiw4nyAhXSCbkGHSwEBV4QMygEegUIARDrAQ..i&docid=WphWkAZgjyOESM&w=3000&h=2250&q=machu%20picchu&hl=pt-BR&ved=2ahUKEwj9wPWiw4nyAhXSCbkGHSwEBV4QMygEegUIARDrAQ
-
-patagonia chilena
-https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F4%2F4d%2FTorres_del_Paine%252C_Laguna_Azul_09.jpg&imgrefurl=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ATorres_del_Paine%2C_Laguna_Azul_09.jpg&tbnid=NtHC-u5jURFKWM&vet=12ahUKEwj-zemKxYnyAhWDuZUCHQtQBTQQMygMegUIARC8AQ..i&docid=Ir6CFu1XQ0UPuM&w=4288&h=2848&q=patag%C3%B4nia%20chilena&hl=pt-BR&ved=2ahUKEwj-zemKxYnyAhWDuZUCHQtQBTQQMygMegUIARC8AQ
- -->
-

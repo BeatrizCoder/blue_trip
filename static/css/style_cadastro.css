@@ -49,52 +49,52 @@ nav div li a{
     text-decoration: none;
     color: #023047;
 }
-header div h2{
-    font-size: 2.5;
-    font-weight: 800;
+header h2{
     text-align: center;
-    padding: 1vw;
+    padding: 2vw;
+    font-size: 2vw;
 }
-
 section {
-    display: flex; 
-    justify-content: center;   
-    padding: 5vw;
+    display: flex;
+    width: 100%;
+    align-items: center;  
 }
-
-section div#imagem{
+section div{
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: auto;
     width: 50%;
 }
-section div img{
-    width: 70%;
-    border-radius: 5%;
+section div form{
+    text-align: center;
+    font-size: 1.3vw;
+    padding: 2vw;
+   
 }
-section div p{
+section div form input, textarea{
+    width: 100%;
+    padding: 1vw;
+    font-size: 1.3vw;
+    border: 2px solid #023047;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    outline: none;
+}
+section div form label{
     font-size: 1.4vw;
-    text-align: justify;
-    color: black;
-    line-height: 4.2vw;
+    padding: auto;
 }
-footer{
-    padding:auto;
-    position: relative;
-    width: 100%;
-
-}
-
-footer ul li{
+section div form button{
+    border: 1px;
     background-color: #023047;
-    width: 100%;
-    list-style: none;
-    display: flex; 
-    justify-content: center;
-}
-
-footer ul li a{
-    padding: 2vw; 
-    margin-left: 5vw;
-    justify-content: center;
-    color: #fff;
+    color:#8ecae6;
+    padding: 1vw;
     font-size: 1.5vw;
-    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5vw;
+    display: block;
+    margin: auto;
+    margin-top: 2vw;
+    cursor: pointer;
+    width: 20%;
 }
