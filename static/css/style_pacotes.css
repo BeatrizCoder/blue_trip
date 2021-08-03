@@ -149,3 +149,18 @@ body section#viagens section#viagens-internacionais div img{
     width: 380px;
     border-radius: 4%;
 }
+
+/*scrollbar*/
+::-webkit-scrollbar {
+    width: 10px;
+  }
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+::-webkit-scrollbar-thumb {
+    background: #023047;
+  }
+::-webkit-scrollbar-thumb:hover {
+    background: #219dbcc0;
+  }
+  

@@ -75,6 +75,26 @@ section div p{
     color: black;
     line-height: 4.2vw;
 }
+
+section div#button a button{
+    border: 1px;
+    background-color: #023047;
+    color:#8ecae6;
+    padding: 1vw;
+    font-size: 1.5vw;
+    font-weight: 500;
+    border-radius: 5vw;
+    display: block;
+    margin: auto;
+    margin-top: 2vw;
+    cursor: pointer;
+    width: 20%;
+}
+
+section div#button a{
+    text-align: end;
+}
+
 footer{
     padding:auto;
     position: relative;
@@ -98,3 +118,18 @@ footer ul li a{
     font-size: 1.5vw;
     text-decoration: none;
 }
+
+/*scrollbar*/
+::-webkit-scrollbar {
+    width: 10px;
+  }
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+::-webkit-scrollbar-thumb {
+    background: #023047;
+  }
+::-webkit-scrollbar-thumb:hover {
+    background: #219dbcc0;
+  }
+  

@@ -82,12 +82,16 @@ nav div li a{
     text-decoration: none;
     color: #023047;
 }
+
+/* SECTION COVID */
+
 section#covid{
     padding: 2vw;
     justify-content: center;
     align-items: center;
     width: 50%;
 }
+
 section#covid div#alerta {
     padding: auto;
     border: 2px solid #023047;

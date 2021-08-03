@@ -57,7 +57,8 @@ header h2{
 section {
     display: flex;
     width: 100%;
-    align-items: center;  
+    align-items: center;
+    justify-content: center;  
 }
 section div{
     justify-content: center;
@@ -98,3 +99,18 @@ section div form button{
     cursor: pointer;
     width: 20%;
 }
+
+/*scrollbar*/
+::-webkit-scrollbar {
+    width: 10px;
+  }
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+::-webkit-scrollbar-thumb {
+    background: #023047;
+  }
+::-webkit-scrollbar-thumb:hover {
+    background: #219dbcc0;
+  }
+  
