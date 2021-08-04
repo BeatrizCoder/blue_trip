@@ -1,14 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
-
-/* teste */
-*{margin: 0; padding:0; box-sizing:border-box;} /* sem espaço nas laterais */
-
 body {
     display: grid;
     place-items: center;  /*centraliza a imagem*/
 }
+
 
 /* CAROUSEL */
 
@@ -17,9 +14,14 @@ div#myCarousel div#carousel-inner div img{
     height: 60vw;
 }
 
+div#myCarousel{
+    position: absolute;
+}
+
 .carousel{
     width:100%;
-    position: absolute;
+    /* position: absolute; */
+    z-index: -1;
   }
 
 
@@ -42,13 +44,14 @@ nav{
     padding: .8vw;
     position: relative;
     width: 100%;
+    z-index: 0;
 }
 nav ul{
     background-color: #023047;
     list-style: none;
     display: flex; 
     justify-content: center;
-    
+
 }
 nav ul h2{
     color: #8ecae6;
@@ -84,6 +87,11 @@ nav div li a{
 }
 
 /* SECTION COVID */
+
+main{
+    display: block;
+    position: relative;
+}
 
 section#covid{
     padding: 2vw;

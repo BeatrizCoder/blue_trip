@@ -6,6 +6,7 @@
     padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
+
 nav{
     padding: .8vw;
     position: relative;
@@ -49,6 +50,9 @@ nav div li a{
     text-decoration: none;
     color: #023047;
 }
+
+/* ------------------------ */
+
 header div h2{
     font-size: 2.5;
     font-weight: 800;
@@ -92,6 +96,7 @@ section div#button a button{
 }
 
 section div#button a{
+    text-decoration: none;
     text-align: end;
 }
 
