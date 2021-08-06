@@ -9,6 +9,10 @@ body {
 
 /* CAROUSEL */
 
+div#myCarousel div#carousel-inner{
+    height: 100vh;
+}
+
 div#myCarousel div#carousel-inner div img{
     width: 100%;
     height: 60vw;
@@ -20,7 +24,6 @@ div#myCarousel{
 
 .carousel{
     width:100%;
-    /* position: absolute; */
     z-index: -1;
   }
 
@@ -246,7 +249,18 @@ footer ul li a{
     font-size: 1.5vw;
     text-decoration: none;
 }
-
+body nav ul a#config{
+    padding: 1rem;
+    text-align: end;
+    text-decoration: none;
+    color: #023047;
+    font-size: 2rem;
+    transition: all .2s ease-out;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+  }
+  
 
 
 /*ajustar campo covid*/

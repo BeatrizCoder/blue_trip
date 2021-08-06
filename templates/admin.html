@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style_admin.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Portfólio | Adm</title>
+</head>
+
+<body>
+
+    <article id="msg">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class=flashes>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+    </article>
+
+    <aside id="left">
+        <!-- Código copiado da documentação: https://flask.palletsprojects.com/en/2.0.x/patterns/flashing/ -->
+        
+
+        <h1>Administração</h1>
+        <ul>
+            <a id="btn-criar"><li>
+                <i class="fa fa-th-list" aria-hidden="true"></i>
+                Criar viagens</li>
+            </a>  
+            <a id="btn-listar"><li>
+                <i class="fa fa-plus-square" aria-hidden="true"></i>
+                Listar viagens</li>
+            </a> 
+            <a href="/"><li>
+                <i class="fa fa-home" aria-hidden="true"></i>
+                Home</li>
+            </a>
+            <a href="/logout"><li>
+                <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+                Sair</li>
+            </a> 
+             
+        </ul>
+    </aside>
+    
+    <section id="body">
+
+        <article id="new">
+            {% if viagem == '' %}
+            <form action='/new' method="POST">
+            <h1>Cadastre uma nova viagem</h1>
+            {% else %}
+            <form action='/admin/{{viagem.id}}' method="POST">
+            <h1>Atualize a viagem</h1>
+            {% endif %}   
+
+                <label for="destino">Destino</label>
+                <input type="text" placeholder="Nome do destino" id="nome" name="nome" value="{{viagem.nome}}">
+
+                <label for="imagem">Imagem</label>
+                <input type="text" placeholder="Link da imagem" id="imagem" name="imagem" value="{{viagem.imagem}}">
+
+                <label for="preco">Preço</label>
+                <input type="text" placeholder="Preço da Viagem" id="link" name="link" value="{{viagem.preco}}">
+
+                <label for="descricao">Descrição</label>
+                <textarea name="descricao" id="descricao" cols="30" rows="10"
+                    placeholder="Digite a descrição do projeto">
+                    {{viagem.descricao}}
+                </textarea>
+
+                <!-- SELECT do Tipo da Viagem -->
+                <label for="tipo-viagem">Escolha o tipo da viagem:</label>
+
+                <select name="tipo-viagem" id="tipo-viagem">
+                    <option value="viagem-nacional">Viagem Nacional</option>
+                    <option value="viagem-internacional">Viagem Internacional</option>
+                </select>
+
+                <button type="submit" name='btnCadastro'>Inserir</button>
+
+                <div>
+                    {% if viagem == '' %}
+                    <button type="submit">Enviar</button>
+                    {% else %}
+                    <a href="/admin">Cancelar</a>
+                    <button type="submit">atualizar</button>
+                    {% endif %}
+                </div>
+                
+            </form>
+    
+
+        {% if viagem == '' %}
+        <article id="lista">
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nome</th>
+                        <th>Imagem</th>
+                        <th>Link</th>
+                        <th style="text-align:center">Edição</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for i in viagens %}
+                    <tr>
+                        <td>{{i.id}}</td>
+                        <td>{{i.nome}}</td>
+                        <td><a href="{{i.imagem}}" target="_blank">{{p.imagem}}</a></td>
+                        <td><a href="{{i.link}}" target="_blank">{{p.link}}</a></td>
+                        <td>
+                            <a href="/edit/{{i.id}}">Editar</a>
+                            <a href="/{{i.id}}">Apagar</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+
+            </table>
+        </article>
+        {% endif %}
+
+ 
+    </section>
+
+    <aside id="right">        
+        <h1>Instruções</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat aspernatur assumenda odio iste officia ea accusamus voluptate possimus sit facilis deleniti, fugit impedit laudantium cum vitae. Minus est beatae earum?</p>
+    </aside>
+
+
+    {% if viagem != undefined %}
+      <section class="modal">
+         <div id="card">
+
+            <a href="/admin" id="fechar"><i class="fa fa-times" aria-hidden="true"></i></a>
+            <h2>Confirmação</h2>
+            <hr>
+
+            <p>Deseja realmente apagar a viagem: {{viagem.destino}} </p>
+            <div id="btns">
+               <a class="btn-cancelar" id="close" href="/adm">Cancelar</a>
+               <a class="btn-apagar" href="/delete/{{viagem.id}}">Apagar</a>
+            </div>
+         </div>
+      </section>
+      {% endif %}
+
+    <script src="../static/js/script_admin.js"></script>
+</body>
+
+</html>
