@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/style_admin.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Portfólio | Adm</title>
+    <title>Blue Trip | Administração</title>
 </head>
 
 <body>
@@ -62,7 +62,7 @@
             {% endif %}   
 
                 <label for="destino">Destino</label>
-                <input type="text" placeholder="Nome do destino" id="nome" name="nome" value="{{viagem.nome}}">
+                <input type="text" placeholder="Nome do destino" id="destino" name="destino" value="{{viagem.nome}}">
 
                 <label for="imagem">Imagem</label>
                 <input type="text" placeholder="Link da imagem" id="imagem" name="imagem" value="{{viagem.imagem}}">
@@ -105,7 +105,7 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Nome</th>
+                        <th>Destino</th>
                         <th>Imagem</th>
                         <th>Link</th>
                         <th style="text-align:center">Edição</th>

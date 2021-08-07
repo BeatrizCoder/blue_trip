@@ -14,7 +14,8 @@ app.secret_key = 'Bluetrip' # Chave de criptografia para guardar sessão de logi
 #     "MAIL_PASSWORD": 'Bluetrip123'
 # }
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://xogpdzxt:XVt_V6xupNzrflQArM6JggGA-XTBS8oR@kesavan.db.elephantsql.com/xogpdzxt'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://fjcmksir:SjscMtZmPTS02sUgIOMzcs7oELi-4YsU@kesavan.db.elephantsql.com/fjcmksir'
+
 db = SQLAlchemy(app)
 
 
@@ -30,11 +31,14 @@ class Viagem(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     destino = db.Column(db.String(150), nullable=False)
     preco = db.Column(db.String(10000), nullable=False)
+    imagem = db.Column(db.String(10000), nullable=False)
     descricao = db.Column(db.String(500), nullable=False)
     link = db.Column(db.String(300), nullable=False)
+    tipo_viagem = db.Column(db.String(10000), nullable=False)
    
-    def __init__(self, destino, imagem, descricao, link, tipo_viagem):
+    def __init__(self, destino, preco, imagem, descricao, link, tipo_viagem):
         self.destino = destino
+        self.preco = preco
         self.imagem = imagem
         self.descricao = descricao
         self.link = link
@@ -59,7 +63,7 @@ def missao():
 
 @app.route('/admin')
 def admin():
-    return render_template('admin.html')
+    return render_template('admin.html', viagens=viagens, viagem='')
 
 @app.route('/perfil')
 def perfil():
@@ -78,8 +82,9 @@ def new():
    if request.method == 'POST':     
       viagem = Viagem(
          request.form['destino'],
-         request.form['imagem'],
          request.form['preco'],
+         request.form['imagem'],
+         request.form['descricao'],
          request.form['link'],
          request.form['tipo-viagem']
       )
