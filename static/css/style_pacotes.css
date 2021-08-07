@@ -182,7 +182,7 @@ body section#viagens section#viagens-internacionais div img{
     background: #219dbcc0;
   }
 
-body section#viagens section#viagens-internacionais div a button{
+section#viagens section#viagens-internacionais div a button{
     border: 1px solid #023047;
     background-color:#023047;;
     color:white;
@@ -195,5 +195,27 @@ body section#viagens section#viagens-internacionais div a button{
     cursor: pointer;
     transition: .6s ease-out;
     width: 40%;
-    justify-content: space-around;
+    flex-direction: space-around;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section#viagens section#viagens-nacionais div a button{
+    border: 1px solid #023047;
+    background-color:#023047;;
+    color:white;
+    padding: 1rem;
+    font-size: .8vw;
+    font-weight: 650;
+    border-radius: .5rem;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    transition: .6s ease-out;
+    width: 40%;
+    flex-direction: space-around;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
