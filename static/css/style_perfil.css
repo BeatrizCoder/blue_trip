@@ -4,31 +4,30 @@
 
 body {
     display: grid;
-    place-items: center;  /*centraliza a imagem*/
+    place-items: center;  
 }
 section div#item-wrapper {
-    width: 100%; /*ocupação total da pag*/
+    width: 100%;
 }
 section div#item-wrapper div#item{
-    display: flex; /*mantem uma imagem ao lado da outra*/
-    /*habilita um scroll somente nas imagens*/
+    display: flex; 
     overflow-x: auto;
     scroll-snap-type: x mandatory; 
-    -webkit-overflow-scrolling: touch; /*habilita a função em outros dispositivos*/
-    scroll-behavior: smooth; /*passa a imagem de forma suave*/
+    -webkit-overflow-scrolling: touch; 
+    scroll-behavior: smooth; 
 }
 .item{
-    flex: none; /*uma imagem ao lado da outra*/
+    flex: none; 
     width: 100%;
     height: 700px;
-    scroll-snap-align: start; /*alinha o inicio da imagem*/
+    scroll-snap-align: start; 
     pointer-events: none;
 }
 section div#item-wrapper div#item img{
-    /*ocupação total da div*/
+    
     width: 100%;
     height: 100%;
-    object-fit: cover; /*não permite que a imagem fique distorcida*/
+    object-fit: cover; 
 }
 /*html*/
 * {
@@ -81,28 +80,39 @@ nav div li a{
     color: #023047;
 }
 
- /*section, div h1, h2{
-    text-align: center;
-    padding: 3rem;
+section div#title h1 h2{
+text-align: center; 
+justify-content: center; 
+align-items: center; 
 
-}*/
+}
 
-section, div#beatriz img{
-width: 50px;
-border-radius: 4%;
+section#perfis div img {
+width: 180px;
+height: 180px; ;
+border-radius: 50%;
 margin: auto;
 justify-content: left;
 align-items: left;
-display: block;
-margin: auto;
+left: 90px;
     
  }
-div#icons a{
+section#perfis div#linkedin a{
 width: 10px;
-text-decoration: none; 
+text-decoration: none;
+color:#0e76a8; 
 font-size: 4rem;
 padding: 2rem;
 transition: all .4s ease-out
+
+ }
+section#perfis div#github a{
+width: 10px;
+text-decoration: none; 
+color:black;
+font-size: 4rem;
+padding: 2rem;
+transition: all .4s ease-out  
 
  }
  
